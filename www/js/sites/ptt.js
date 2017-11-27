@@ -8,7 +8,7 @@ siteManager.regSite('PTT',
     name: 'PTT',
     addr: 'ptt.cc',
     port: 23, //set 22 for ssh
-    protocol: 'telnet', //set 'ssh' for ssh
+    protocol: 'websocket', //set 'ssh' for ssh, 'websocket' for websocket
     prefsRoot: 'openptt.',
     col: 80,
     row: 24,

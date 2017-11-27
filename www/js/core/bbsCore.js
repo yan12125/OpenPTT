@@ -5,6 +5,7 @@ define(function(require, exports, module) {
       AnsiParser = require('core/utils/ansiParser'),
       TelnetProtocol = require('core/lib/telnet'),
       SshProtocol = require('core/lib/ssh'),
+      WebSocketProtocol = require('core/lib/websocket'),
       siteManager = require('core/utils/siteManager');
 
   var BBSCore = function () {
@@ -73,6 +74,8 @@ define(function(require, exports, module) {
           this.conn = new TelnetProtocol(this);
         } else if(siteData.protocol == 'ssh') {
           this.conn = new SshProtocol(this);
+        } else if(siteData.protocol == 'websocket') {
+          this.conn = new WebSocketProtocol(this);
         }
       }
 
